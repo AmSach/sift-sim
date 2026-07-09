@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sift-sim"
+version = "0.1.0"
+description = "Zero-dependency scanner for hidden prompts, encoded payloads, and suspicious patterns in LLM-style text."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Aman Sachan", email = "amansachan92905@gmail.com" }]
+keywords = ["llm", "prompt-injection", "security", "scanner", "ai-safety"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Text Processing :: Linguistic",
+]
+
+[project.scripts]
+sift = "sift.scanner:main"
+
+[tool.setuptools.packages.find]
+include = ["sift*"]
